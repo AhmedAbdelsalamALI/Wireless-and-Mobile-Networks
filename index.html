@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireless and Mobile Networks Final Revision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font for a modern look */
+            background-color: #f0f2f5; /* Light gray background */
+            background-image: linear-gradient(to right top, #d1d6e0, #e0e5ed, #f0f2f5, #fcfcfc, #ffffff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            direction: rtl; /* Right-to-left for Arabic */
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 2.5rem; /* 40px */
+            border-radius: 1.5rem; /* 24px */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 1000px; /* Increased max-width for more space */
+            text-align: center;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem; /* 16px */
+            font-size: 2.8rem; /* Larger title */
+            font-weight: 800; /* Extra bold */
+            background: linear-gradient(90deg, #3498db, #2ecc71); /* Gradient text */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1.25rem; /* Larger subtitle */
+            margin-bottom: 2.5rem; /* 40px */
+            line-height: 1.7;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .quiz-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted minmax */
+            gap: 1.5rem; /* 24px */
+            margin-top: 2rem; /* 32px */
+        }
+        .quiz-link-card {
+            background-color: #ffffff;
+            color: #34495e;
+            padding: 1.5rem; /* 24px */
+            border-radius: 1rem; /* 16px */
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px; /* Increased height for better visual */
+            border: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+        .quiz-link-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-color: #3498db;
+            background-color: #f8faff; /* Light blue on hover */
+        }
+        .quiz-link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .quiz-link-card:hover::before {
+            transform: translateX(0);
+        }
+        .card-number {
+            font-size: 3.5rem; /* Very large number */
+            font-weight: 900; /* Black font weight */
+            color: #d1d6e0; /* Subtle gray for number */
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+        .quiz-link-card:hover .card-number {
+            color: #3498db; /* Blue on hover */
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-top: 0.5rem;
+        }
+        .footer-note {
+            margin-top: 3rem; /* 48px */
+            font-size: 0.95rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">Wireless and Mobile Networks</h1>
+        <p class="subtitle">
+            مرحباً بك في مراجعتك ! .
+        </p>
+
+        <div class="quiz-links-grid">
+            <a href="Untitled-1-10.html" class="quiz-link-card">
+                <span class="card-number">1</span>
+                <span class="card-title">الجزء الأول (1-10)</span>
+            </a>
+            <a href="Untitled-11-20.html" class="quiz-link-card">
+                <span class="card-number">2</span>
+                <span class="card-title">الجزء الثاني (11-20)</span>
+            </a>
+            <a href="Untitled-21-30.html" class="quiz-link-card">
+                <span class="card-number">3</span>
+                <span class="card-title">الجزء الثالث (21-30)</span>
+            </a>
+            <a href="Untitled-31-40.html" class="quiz-link-card">
+                <span class="card-number">4</span>
+                <span class="card-title">الجزء الرابع (31-40)</span>
+            </a>
+            <a href="Untitled-41-50.html" class="quiz-link-card">
+                <span class="card-number">5</span>
+                <span class="card-title">الجزء الخامس (41-50)</span>
+            </a>
+            <a href="Untitled-51-60.html" class="quiz-link-card">
+                <span class="card-number">6</span>
+                <span class="card-title">الجزء السادس (51-60)</span>
+            </a>
+            <a href="Untitled-61-70.html" class="quiz-link-card">
+                <span class="card-number">7</span>
+                <span class="card-title">الجزء السابع (61-70)</span>
+            </a>
+            <a href="Untitled-71-77.html" class="quiz-link-card">
+                <span class="card-number">8</span>
+                <span class="card-title">الجزء الثامن (71-77)</span>
+            </a>
+        </div>
+
+        <p class="footer-note">
+         
+        </p>
+    </div>
+</body>
+</html>
