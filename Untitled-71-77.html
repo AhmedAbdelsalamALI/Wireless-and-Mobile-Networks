@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة الشبكات اللاسلكية والمتنقلة - الجزء الثامن والأخير</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            direction: rtl; /* Right-to-left for Arabic */
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .question-block {
+            background-color: #ecf0f1;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .question-text {
+            font-size: 1.15em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1em;
+            color: #34495e;
+            cursor: pointer;
+            padding: 10px 15px;
+            border: 1px solid #c0c0c0;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .options label:hover {
+            background-color: #e0e6e9;
+            border-color: #999;
+        }
+        .options input[type="radio"] {
+            margin-left: 10px;
+            transform: scale(1.1);
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+            font-size: 0.95em;
+        }
+        .correct {
+            color: #27ae60;
+            background-color: #e6ffee;
+            border: 1px solid #27ae60;
+        }
+        .incorrect {
+            color: #e74c3c;
+            background-color: #ffe6e6;
+            border: 1px solid #e74c3c;
+        }
+        .true-false-options label {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 1em;
+            color: #34495e;
+            cursor: pointer;
+            padding: 10px 15px;
+            border: 1px solid #c0c0c0;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .true-false-options label:hover {
+            background-color: #e0e6e9;
+            border-color: #999;
+        }
+        .true-false-options input[type="radio"] {
+            margin-left: 10px;
+            transform: scale(1.1);
+        }
+        #results {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 2px solid #3498db;
+            text-align: center;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+        #results span {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .correct-count { color: #27ae60; }
+        .incorrect-count { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wireless and Mobile Networks</h1>
+        <h2>Final Revision 2025</h2>
+        <p style="text-align: center; color: #e74c3c; font-weight: bold; margin-bottom: 30px;">
+            متنساش تذاكر مذكره الميد تيرم تاني لانها مهمه جدا
+        </p>
+
+        <h3 class="section-title">أسئلة من الصفحات (تقريباً 71-77)</h3>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">704. What is the primary characteristic of a wireless sensor network (WSN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q704" value="a"> a) High bandwidth communication</label>
+                <label><input type="radio" name="q704" value="b"> b) Centralized architecture</label>
+                <label><input type="radio" name="q704" value="c"> c) Low-power, distributed sensing</label>
+                <label><input type="radio" name="q704" value="d"> d) High processing power nodes</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">705. WSNs are typically deployed in harsh environments.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q705" value="True"> True</label>
+                <label><input type="radio" name="q705" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">706. Energy efficiency is a major challenge in WSNs due to battery constraints.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q706" value="True"> True</label>
+                <label><input type="radio" name="q706" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">707. Scalability in WSNs means handling only a few nodes.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q707" value="True"> True</label>
+                <label><input type="radio" name="q707" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">708. Fault tolerance allows WSNs to adapt to node failures.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q708" value="True"> True</label>
+                <label><input type="radio" name="q708" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">709. Security in WSNs is not a concern for hacking or jamming.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q709" value="True"> True</label>
+                <label><input type="radio" name="q709" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">710. Data overload in WSNs is caused by transmitting redundant data.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q710" value="True"> True</label>
+                <label><input type="radio" name="q710" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">711. What limits the data transmission in WSNs?</p>
+            <div class="options">
+                <label><input type="radio" name="q711" value="a"> a) Limited bandwidth of low-power radios</label>
+                <label><input type="radio" name="q711" value="b"> b) High-power radios</label>
+                <label><input type="radio" name="q711" value="c"> c) Stable network links</label>
+                <label><input type="radio" name="q711" value="d"> d) Unlimited battery life</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">712. What causes unreliable links in WSN communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q712" value="a"> a) Walls, weather, or interference</label>
+                <label><input type="radio" name="q712" value="b"> b) High bandwidth availability</label>
+                <label><input type="radio" name="q712" value="c"> c) Fixed node positions</label>
+                <label><input type="radio" name="q712" value="d"> d) Low energy consumption</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">713. What is the highest energy-consuming activity in WSNs?</p>
+            <div class="options">
+                <label><input type="radio" name="q713" value="a"> a) Data processing</label>
+                <label><input type="radio" name="q713" value="b"> b) Sending data</label>
+                <label><input type="radio" name="q713" value="c"> c) Sensing environmental data</label>
+                <label><input type="radio" name="q713" value="d"> d) Storing data</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">714. Why do low-power radios contribute to communication challenges?</p>
+            <div class="options">
+                <label><input type="radio" name="q714" value="a"> a) They increase link reliability</label>
+                <label><input type="radio" name="q714" value="b"> b) They have limited data capacity</label>
+                <label><input type="radio" name="q714" value="c"> c) They reduce energy costs</label>
+                <label><input type="radio" name="q714" value="d"> d) They simplify routing</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">715. What disrupts WSN signals besides weather?</p>
+            <div class="options">
+                <label><input type="radio" name="q715" value="a"> a) Interference</label>
+                <label><input type="radio" name="q715" value="b"> b) High bandwidth</label>
+                <label><input type="radio" name="q715" value="c"> c) Stable topology</label>
+                <label><input type="radio" name="q715" value="d"> d) Long battery life</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">716. Limited bandwidth is a communication challenge in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q716" value="True"> True</label>
+                <label><input type="radio" name="q716" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">717. Unreliable links in WSNs are caused only by node failures.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q717" value="True"> True</label>
+                <label><input type="radio" name="q717" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">718. Sending data is the most energy-intensive task in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q718" value="True"> True</label>
+                <label><input type="radio" name="q718" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">719. Low-power radios in WSNs can send large amounts of data at once.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q719" value="True"> True</label>
+                <label><input type="radio" name="q719" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">720. Interference can disrupt communication links in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q720" value="True"> True</label>
+                <label><input type="radio" name="q720" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">721. What is the primary characteristic of a wireless sensor network (WSN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q721" value="a"> a) High bandwidth communication</label>
+                <label><input type="radio" name="q721" value="b"> b) Centralized architecture</label>
+                <label><input type="radio" name="q721" value="c"> c) Low-power, distributed sensing</label>
+                <label><input type="radio" name="q721" value="d"> d) High processing power nodes</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">722. WSNs are typically deployed in harsh environments.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q722" value="True"> True</label>
+                <label><input type="radio" name="q722" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">723. Energy efficiency is a major challenge in WSNs due to battery constraints.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q723" value="True"> True</label>
+                <label><input type="radio" name="q723" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">724. Scalability in WSNs means handling only a few nodes.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q724" value="True"> True</label>
+                <label><input type="radio" name="q724" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">725. Fault tolerance allows WSNs to adapt to node failures.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q725" value="True"> True</label>
+                <label><input type="radio" name="q725" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">726. Security in WSNs is not a concern for hacking or jamming.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q726" value="True"> True</label>
+                <label><input type="radio" name="q726" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">727. Data overload in WSNs is caused by transmitting redundant data.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q727" value="True"> True</label>
+                <label><input type="radio" name="q727" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">728. What limits the data transmission in WSNs?</p>
+            <div class="options">
+                <label><input type="radio" name="q728" value="a"> a) Limited bandwidth of low-power radios</label>
+                <label><input type="radio" name="q728" value="b"> b) High-power radios</label>
+                <label><input type="radio" name="q728" value="c"> c) Stable network links</label>
+                <label><input type="radio" name="q728" value="d"> d) Unlimited battery life</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">729. What causes unreliable links in WSN communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q729" value="a"> a) Walls, weather, or interference</label>
+                <label><input type="radio" name="q729" value="b"> b) High bandwidth availability</label>
+                <label><input type="radio" name="q729" value="c"> c) Fixed node positions</label>
+                <label><input type="radio" name="q729" value="d"> d) Low energy consumption</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">730. What is the highest energy-consuming activity in WSNs?</p>
+            <div class="options">
+                <label><input type="radio" name="q730" value="a"> a) Data processing</label>
+                <label><input type="radio" name="q730" value="b"> b) Sending data</label>
+                <label><input type="radio" name="q730" value="c"> c) Sensing environmental data</label>
+                <label><input type="radio" name="q730" value="d"> d) Storing data</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">731. Why do low-power radios contribute to communication challenges?</p>
+            <div class="options">
+                <label><input type="radio" name="q731" value="a"> a) They increase link reliability</label>
+                <label><input type="radio" name="q731" value="b"> b) They have limited data capacity</label>
+                <label><input type="radio" name="q731" value="c"> c) They reduce energy costs</label>
+                <label><input type="radio" name="q731" value="d"> d) They simplify routing</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">732. What disrupts WSN signals besides weather?</p>
+            <div class="options">
+                <label><input type="radio" name="q732" value="a"> a) Interference</label>
+                <label><input type="radio" name="q732" value="b"> b) High bandwidth</label>
+                <label><input type="radio" name="q732" value="c"> c) Stable topology</label>
+                <label><input type="radio" name="q732" value="d"> d) Long battery life</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">733. Limited bandwidth is a communication challenge in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q733" value="True"> True</label>
+                <label><input type="radio" name="q733" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">734. Unreliable links in WSNs are caused only by node failures.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q734" value="True"> True</label>
+                <label><input type="radio" name="q734" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">735. Sending data is the most energy-intensive task in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q735" value="True"> True</label>
+                <label><input type="radio" name="q735" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">736. Low-power radios in WSNs can send large amounts of data at once.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q736" value="True"> True</label>
+                <label><input type="radio" name="q736" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">737. Interference can disrupt communication links in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q737" value="True"> True</label>
+                <label><input type="radio" name="q737" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">738. What is the primary characteristic of a wireless sensor network (WSN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q738" value="a"> a) High bandwidth communication</label>
+                <label><input type="radio" name="q738" value="b"> b) Centralized architecture</label>
+                <label><input type="radio" name="q738" value="c"> c) Low-power, distributed sensing</label>
+                <label><input type="radio" name="q738" value="d"> d) High processing power nodes</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">739. WSNs are typically deployed in harsh environments.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q739" value="True"> True</label>
+                <label><input type="radio" name="q739" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">740. Energy efficiency is a major challenge in WSNs due to battery constraints.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q740" value="True"> True</label>
+                <label><input type="radio" name="q740" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">741. Scalability in WSNs means handling only a few nodes.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q741" value="True"> True</label>
+                <label><input type="radio" name="q741" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">742. Fault tolerance allows WSNs to adapt to node failures.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q742" value="True"> True</label>
+                <label><input type="radio" name="q742" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">743. Security in WSNs is not a concern for hacking or jamming.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q743" value="True"> True</label>
+                <label><input type="radio" name="q743" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">744. Data overload in WSNs is caused by transmitting redundant data.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q744" value="True"> True</label>
+                <label><input type="radio" name="q744" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">745. What limits the data transmission in WSNs?</p>
+            <div class="options">
+                <label><input type="radio" name="q745" value="a"> a) Limited bandwidth of low-power radios</label>
+                <label><input type="radio" name="q745" value="b"> b) High-power radios</label>
+                <label><input type="radio" name="q745" value="c"> c) Stable network links</label>
+                <label><input type="radio" name="q745" value="d"> d) Unlimited battery life</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">746. What causes unreliable links in WSN communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q746" value="a"> a) Walls, weather, or interference</label>
+                <label><input type="radio" name="q746" value="b"> b) High bandwidth availability</label>
+                <label><input type="radio" name="q746" value="c"> c) Fixed node positions</label>
+                <label><input type="radio" name="q746" value="d"> d) Low energy consumption</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">747. What is the highest energy-consuming activity in WSNs?</p>
+            <div class="options">
+                <label><input type="radio" name="q747" value="a"> a) Data processing</label>
+                <label><input type="radio" name="q747" value="b"> b) Sending data</label>
+                <label><input type="radio" name="q747" value="c"> c) Sensing environmental data</label>
+                <label><input type="radio" name="q747" value="d"> d) Storing data</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">748. Why do low-power radios contribute to communication challenges?</p>
+            <div class="options">
+                <label><input type="radio" name="q748" value="a"> a) They increase link reliability</label>
+                <label><input type="radio" name="q748" value="b"> b) They have limited data capacity</label>
+                <label><input type="radio" name="q748" value="c"> c) They reduce energy costs</label>
+                <label><input type="radio" name="q748" value="d"> d) They simplify routing</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">749. What disrupts WSN signals besides weather?</p>
+            <div class="options">
+                <label><input type="radio" name="q749" value="a"> a) Interference</label>
+                <label><input type="radio" name="q749" value="b"> b) High bandwidth</label>
+                <label><input type="radio" name="q749" value="c"> c) Stable topology</label>
+                <label><input type="radio" name="q749" value="d"> d) Long battery life</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">750. Limited bandwidth is a communication challenge in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q750" value="True"> True</label>
+                <label><input type="radio" name="q750" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">751. Unreliable links in WSNs are caused only by node failures.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q751" value="True"> True</label>
+                <label><input type="radio" name="q751" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">752. Sending data is the most energy-intensive task in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q752" value="True"> True</label>
+                <label><input type="radio" name="q752" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">753. Low-power radios in WSNs can send large amounts of data at once.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q753" value="True"> True</label>
+                <label><input type="radio" name="q753" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">754. Interference can disrupt communication links in WSNs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q754" value="True"> True</label>
+                <label><input type="radio" name="q754" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div id="results">
+            النتائج: <span class="correct-count" id="correctCount">0</span> إجابة صحيحة / <span class="incorrect-count" id="incorrectCount">0</span> إجابة خاطئة
+        </div>
+    </div>
+
+    <script>
+        let correctAnswersCount = 0;
+        let incorrectAnswersCount = 0;
+        const answeredQuestions = new Set(); 
+
+        document.querySelectorAll('.question-block, .true-false-question').forEach(block => {
+            const radios = block.querySelectorAll('input[type="radio"]');
+            const correctAnswer = block.dataset.correctAnswer;
+            const feedbackDiv = block.querySelector('.feedback');
+            if (radios.length === 0) return; 
+
+            const questionName = radios[0].name; 
+
+            radios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const wasAnswered = answeredQuestions.has(questionName);
+                    
+                    if (this.value === correctAnswer) {
+                        if (!wasAnswered || (wasAnswered && feedbackDiv.classList.contains('incorrect'))) {
+                            correctAnswersCount++;
+                            if (wasAnswered) incorrectAnswersCount--; 
+                        }
+                        feedbackDiv.textContent = 'إجابة صحيحة! 🎉';
+                        feedbackDiv.className = 'feedback correct';
+                    } else {
+                        if (!wasAnswered || (wasAnswered && feedbackDiv.classList.contains('correct'))) {
+                            incorrectAnswersCount++;
+                            if (wasAnswered) correctAnswersCount--; 
+                        }
+                        feedbackDiv.textContent = 'إجابة خاطئة.'; 
+                        feedbackDiv.className = 'feedback incorrect';
+                    }
+                    
+                    if (!wasAnswered) {
+                        answeredQuestions.add(questionName); 
+                    }
+                    feedbackDiv.style.display = 'block';
+                    
+                    document.getElementById('correctCount').textContent = correctAnswersCount;
+                    document.getElementById('incorrectCount').textContent = incorrectAnswersCount;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

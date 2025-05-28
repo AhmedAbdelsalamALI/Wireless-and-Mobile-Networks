@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة الشبكات اللاسلكية والمتنقلة - الجزء الثالث</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            direction: rtl; /* Right-to-left for Arabic */
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .question-block {
+            background-color: #ecf0f1;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .question-text {
+            font-size: 1.15em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1em;
+            color: #34495e;
+            cursor: pointer;
+            padding: 10px 15px;
+            border: 1px solid #c0c0c0;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .options label:hover {
+            background-color: #e0e6e9;
+            border-color: #999;
+        }
+        .options input[type="radio"] {
+            margin-left: 10px;
+            transform: scale(1.1);
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+            font-size: 0.95em;
+        }
+        .correct {
+            color: #27ae60;
+            background-color: #e6ffee;
+            border: 1px solid #27ae60;
+        }
+        .incorrect {
+            color: #e74c3c;
+            background-color: #ffe6e6;
+            border: 1px solid #e74c3c;
+        }
+        .true-false-options label {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 1em;
+            color: #34495e;
+            cursor: pointer;
+            padding: 10px 15px;
+            border: 1px solid #c0c0c0;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .true-false-options label:hover {
+            background-color: #e0e6e9;
+            border-color: #999;
+        }
+        .true-false-options input[type="radio"] {
+            margin-left: 10px;
+            transform: scale(1.1);
+        }
+        #results {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 2px solid #3498db;
+            text-align: center;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+        #results span {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .correct-count { color: #27ae60; }
+        .incorrect-count { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wireless and Mobile Networks</h1>
+        <h2>Final Revision 2025</h2>
+        <p style="text-align: center; color: #e74c3c; font-weight: bold; margin-bottom: 30px;">
+            متنساش تذاكر مذكره الميد تيرم تاني لانها مهمه جدا
+        </p>
+
+        <h3 class="section-title">أسئلة من الصفحات (تقريباً 21-30)</h3>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">166. What is the primary characteristic of a wireless channel?</p>
+            <div class="options">
+                <label><input type="radio" name="q166" value="a"> a) It is a fixed, unchanging medium.</label>
+                <label><input type="radio" name="q166" value="b"> b) It is dynamic and affected by various phenomena.</label>
+                <label><input type="radio" name="q166" value="c"> c) It provides unlimited bandwidth.</label>
+                <label><input type="radio" name="q166" value="d"> d) It is immune to interference.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">167. Fading in wireless communication refers to the fluctuation of signal strength.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q167" value="True"> True</label>
+                <label><input type="radio" name="q167" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">168. Line-of-sight (LOS) propagation always guarantees perfect signal reception.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q168" value="True"> True</label>
+                <label><input type="radio" name="q168" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">169. What is multipath propagation?</p>
+            <div class="options">
+                <label><input type="radio" name="q169" value="a"> a) Signals arriving at the receiver via multiple paths.</label>
+                <label><input type="radio" name="q169" value="b"> b) Signals traveling in a straight line only.</label>
+                <label><input type="radio" name="q169" value="c"> c) A single signal transmitted over a single path.</label>
+                <label><input type="radio" name="q169" value="d"> d) Signals that are not affected by reflections.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">170. Multipath propagation can lead to constructive or destructive interference.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q170" value="True"> True</label>
+                <label><input type="radio" name="q170" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">171. Shadowing in wireless communication occurs when a signal is blocked by obstacles.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q171" value="True"> True</label>
+                <label><input type="radio" name="q171" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">172. What is the primary cause of path loss in wireless communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q172" value="a"> a) Signal amplification</label>
+                <label><input type="radio" name="q172" value="b"> b) Spreading of electromagnetic waves over distance</label>
+                <label><input type="radio" name="q172" value="c"> c) Interference from other signals</label>
+                <label><input type="radio" name="q172" value="d"> d) Reflection from smooth surfaces</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">173. Path loss increases as the distance between transmitter and receiver decreases.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q173" value="True"> True</label>
+                <label><input type="radio" name="q173" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">174. Reflection occurs when a signal bounces off a smooth surface.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q174" value="True"> True</label>
+                <label><input type="radio" name="q174" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">175. What is diffraction in wireless communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q175" value="a"> a) Signals bending around obstacles.</label>
+                <label><input type="radio" name="q175" value="b"> b) Signals being absorbed by materials.</label>
+                <label><input type="radio" name="q175" value="c"> c) Signals traveling in a straight line.</label>
+                <label><input type="radio" name="q175" value="d"> d) Signals splitting into multiple components.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">176. Scattering occurs when a signal hits a rough surface and spreads in many directions.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q176" value="True"> True</label>
+                <label><input type="radio" name="q176" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">177. Absorption in wireless communication means the signal passes through obstacles without losing energy.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q177" value="True"> True</label>
+                <label><input type="radio" name="q177" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">178. What is the primary purpose of modulation in wireless communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q178" value="a"> a) To reduce signal strength.</label>
+                <label><input type="radio" name="q178" value="b"> b) To impress information onto a carrier wave.</label>
+                <label><input type="radio" name="q178" value="c"> c) To eliminate all noise from the signal.</label>
+                <label><input type="radio" name="q178" value="d"> d) To increase the physical size of antennas.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">179. Amplitude Modulation (AM) changes the frequency of the carrier wave.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q179" value="True"> True</label>
+                <label><input type="radio" name="q179" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">180. Frequency Modulation (FM) changes the amplitude of the carrier wave.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q180" value="True"> True</label>
+                <label><input type="radio" name="q180" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">181. What is Phase Modulation (PM)?</p>
+            <div class="options">
+                <label><input type="radio" name="q181" value="a"> a) Changing the amplitude of the carrier wave.</label>
+                <label><input type="radio" name="q181" value="b"> b) Changing the frequency of the carrier wave.</label>
+                <label><input type="radio" name="q181" value="c"> c) Changing the phase of the carrier wave.</label>
+                <label><input type="radio" name="q181" value="d"> d) Changing the power of the carrier wave.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">182. Digital modulation techniques convert analog signals into digital form.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q182" value="True"> True</label>
+                <label><input type="radio" name="q182" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">183. QPSK (Quadrature Phase Shift Keying) is a type of digital modulation.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q183" value="True"> True</label>
+                <label><input type="radio" name="q183" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">184. What is the primary advantage of digital modulation over analog modulation?</p>
+            <div class="options">
+                <label><input type="radio" name="q184" value="a"> a) Better noise immunity and higher data rates.</label>
+                <label><input type="radio" name="q184" value="b"> b) Simpler implementation and lower cost.</label>
+                <label><input type="radio" name="q184" value="c"> c) Requires less bandwidth.</label>
+                <label><input type="radio" name="q184" value="d"> d) Only supports voice communication.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">185. OFDM (Orthogonal Frequency Division Multiplexing) is a modulation technique used in Wi-Fi and LTE.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q185" value="True"> True</label>
+                <label><input type="radio" name="q185" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">186. Spread Spectrum techniques are used to make signals more susceptible to interference.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q186" value="True"> True</label>
+                <label><input type="radio" name="q186" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">187. What is the primary purpose of coding in wireless communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q187" value="a"> a) To detect and correct errors in transmitted data.</label>
+                <label><input type="radio" name="q187" value="b"> b) To increase the physical size of antennas.</label>
+                <label><input type="radio" name="q187" value="c"> c) To reduce the bandwidth required for transmission.</label>
+                <label><input type="radio" name="q187" value="d"> d) To make signals easier to interfere with.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">188. Forward Error Correction (FEC) adds redundant information to data for error correction.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q188" value="True"> True</label>
+                <label><input type="radio" name="q188" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">189. Cyclic Redundancy Check (CRC) is used for error correction.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q189" value="True"> True</label>
+                <label><input type="radio" name="q189" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">190. What is the main purpose of MIMO (Multiple-Input Multiple-Output) technology?</p>
+            <div class="options">
+                <label><input type="radio" name="q190" value="a"> a) To reduce the number of antennas in a system.</label>
+                <label><input type="radio" name="q190" value="b"> b) To improve data rates and spectral efficiency using multiple antennas.</label>
+                <label><input type="radio" name="q190" value="c"> c) To simplify network architecture.</label>
+                <label><input type="radio" name="q190" value="d"> d) To eliminate the need for modulation.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">191. MIMO systems use only one antenna for transmission and reception.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q191" value="True"> True</label>
+                <label><input type="radio" name="q191" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">192. Spatial multiplexing in MIMO allows transmitting multiple independent data streams simultaneously.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q192" value="True"> True</label>
+                <label><input type="radio" name="q192" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">193. What is the primary purpose of beamforming in wireless communication?</p>
+            <div class="options">
+                <label><input type="radio" name="q193" value="a"> a) To spread signals in all directions equally.</label>
+                <label><input type="radio" name="q193" value="b"> b) To reduce the signal-to-noise ratio.</label>
+                <label><input type="radio" name="q193" value="c"> c) To direct radio signals towards a specific receiver.</label>
+                <label><input type="radio" name="q193" value="d"> d) To increase interference.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">194. Beamforming improves signal strength and reduces interference.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q194" value="True"> True</label>
+                <label><input type="radio" name="q194" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">195. Beamforming is only used in 5G networks.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q195" value="True"> True</label>
+                <label><input type="radio" name="q195" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">196. What is a major advantage of cognitive radio?</p>
+            <div class="options">
+                <label><input type="radio" name="q196" value="a"> a) Fixed spectrum allocation.</label>
+                <label><input type="radio" name="q196" value="b"> b) Dynamic spectrum access and improved spectrum utilization.</label>
+                <label><input type="radio" name="q196" value="c"> c) Requires manual frequency tuning.</label>
+                <label><input type="radio" name="q196" value="d"> d) Limited to specific frequency bands.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">197. Cognitive radio can sense its environment and adapt its transmission parameters.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q197" value="True"> True</label>
+                <label><input type="radio" name="q197" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">198. Spectrum holes are unused portions of licensed spectrum.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q198" value="True"> True</label>
+                <label><input type="radio" name="q198" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">199. What is the main challenge in implementing cognitive radio?</p>
+            <div class="options">
+                <label><input type="radio" name="q199" value="a"> a) Complex spectrum sensing and management algorithms.</label>
+                <label><input type="radio" name="q199" value="b"> b) Lack of available spectrum.</label>
+                <label><input type="radio" name="q199" value="c"> c) Simple hardware requirements.</label>
+                <label><input type="radio" name="q199" value="d"> d) Inability to adapt to changing environments.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">200. Cognitive radio aims to improve spectrum efficiency.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q200" value="True"> True</label>
+                <label><input type="radio" name="q200" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">201. Secondary users in cognitive radio have priority access to spectrum.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q201" value="True"> True</label>
+                <label><input type="radio" name="q201" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">202. What is the primary purpose of a mobile ad-hoc network (MANET)?</p>
+            <div class="options">
+                <label><input type="radio" name="q202" value="a"> a) To connect devices to a fixed infrastructure.</label>
+                <label><input type="radio" name="q202" value="b"> b) To enable communication between mobile devices without a central infrastructure.</label>
+                <label><input type="radio" name="q202" value="c"> c) To provide high-speed internet access to homes.</label>
+                <label><input type="radio" name="q202" value="d"> d) To manage satellite communication.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">203. MANETs have a centralized control point.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q203" value="True"> True</label>
+                <label><input type="radio" name="q203" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">204. Nodes in a MANET can act as routers to forward data.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q204" value="True"> True</label>
+                <label><input type="radio" name="q204" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">205. What is a major challenge in MANETs?</p>
+            <div class="options">
+                <label><input type="radio" name="q205" value="a"> a) Dynamic topology and routing complexity.</label>
+                <label><input type="radio" name="q205" value="b"> b) Fixed infrastructure requirements.</label>
+                <label><input type="radio" name="q205" value="c"> c) High bandwidth availability.</label>
+                <label><input type="radio" name="q205" value="d"> d) Simple security management.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">206. MANETs are suitable for disaster relief operations.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q206" value="True"> True</label>
+                <label><input type="radio" name="q206" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">207. Security is not a major concern in MANETs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q207" value="True"> True</label>
+                <label><input type="radio" name="q207" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">208. What is the primary characteristic of a vehicular ad-hoc network (VANET)?</p>
+            <div class="options">
+                <label><input type="radio" name="q208" value="a"> a) Fixed nodes in a static environment.</label>
+                <label><input type="radio" name="q208" value="b"> b) Communication between pedestrians only.</label>
+                <label><input type="radio" name="q208" value="c"> c) Communication between vehicles and roadside units.</label>
+                <label><input type="radio" name="q208" value="d"> d) Centralized control by a single server.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">209. VANETs are a type of MANET.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q209" value="True"> True</label>
+                <label><input type="radio" name="q209" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">210. VANETs are used for improving road safety and traffic efficiency.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q210" value="True"> True</label>
+                <label><input type="radio" name="q210" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">211. What is a major challenge in VANETs?</p>
+            <div class="options">
+                <label><input type="radio" name="q211" value="a"> a) Static network topology.</label>
+                <label><input type="radio" name="q211" value="b"> b) High mobility and rapid topology changes.</label>
+                <label><input type="radio" name="q211" value="c"> c) Low data rate requirements.</label>
+                <label><input type="radio" name="q211" value="d"> d) Simple security protocols.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">212. Roadside Units (RSUs) in VANETs are mobile devices.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q212" value="True"> True</label>
+                <label><input type="radio" name="q212" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">213. VANETs can facilitate communication for autonomous vehicles.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q213" value="True"> True</label>
+                <label><input type="radio" name="q213" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">214. What is the primary characteristic of a wireless mesh network (WMN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q214" value="a"> a) Centralized architecture with a single access point.</label>
+                <label><input type="radio" name="q214" value="b"> b) Requires wired connections for all nodes.</label>
+                <label><input type="radio" name="q214" value="c"> c) Decentralized, self-healing network with multiple paths.</label>
+                <label><input type="radio" name="q214" value="d"> d) Limited to short-range communication only.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">215. WMNs are self-configuring and self-healing.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q215" value="True"> True</label>
+                <label><input type="radio" name="q215" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">216. Each node in a WMN acts as a router.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q216" value="True"> True</label>
+                <label><input type="radio" name="q216" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">217. WMNs are typically used for providing internet access in rural areas.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q217" value="True"> True</label>
+                <label><input type="radio" name="q217" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">218. What is a major advantage of WMNs?</p>
+            <div class="options">
+                <label><input type="radio" name="q218" value="a"> a) High cost of deployment</label>
+                <label><input type="radio" name="q218" value="b"> b) Increased coverage and reliability through redundancy</label>
+                <label><input type="radio" name="q218" value="c"> c) Centralized management</label>
+                <label><input type="radio" name="q218" value="d"> d) Limited scalability</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">219. WMNs are less resilient to node failures than traditional Wi-Fi networks.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q219" value="True"> True</label>
+                <label><input type="radio" name="q219" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">220. WMNs are primarily used for short-range personal area networks.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q220" value="True"> True</label>
+                <label><input type="radio" name="q220" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">221. What is the primary characteristic of a wireless local area network (WLAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q221" value="a"> a) Global coverage using satellites</label>
+                <label><input type="radio" name="q221" value="b"> b) Connecting devices wirelessly within a limited geographic area</label>
+                <label><input type="radio" name="q221" value="c"> c) Providing cellular communication over a wide area</label>
+                <label><input type="radio" name="q221" value="d"> d) Using wired connections for all devices</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">222. WLANs typically use Wi-Fi technology.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q222" value="True"> True</label>
+                <label><input type="radio" name="q222" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">223. An Access Point (AP) is a central device in a WLAN.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q223" value="True"> True</label>
+                <label><input type="radio" name="q223" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">224. WLANs are suitable for connecting devices across different cities.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q224" value="True"> True</label>
+                <label><input type="radio" name="q224" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">225. What is the primary advantage of WLANs over wired LANs?</p>
+            <div class="options">
+                <label><input type="radio" name="q225" value="a"> a) Mobility and ease of deployment</label>
+                <label><input type="radio" name="q225" value="b"> b) Higher security by default</label>
+                <label><input type="radio" name="q225" value="c"> c) Lower susceptibility to interference</label>
+                <label><input type="radio" name="q225" value="d"> d) Guaranteed higher bandwidth for all users</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">226. WLANs typically offer higher data rates than wired LANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q226" value="True"> True</label>
+                <label><input type="radio" name="q226" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">227. WLANs are commonly used in homes, offices, and public hotspots.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q227" value="True"> True</label>
+                <label><input type="radio" name="q227" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">228. What is the primary characteristic of a wireless personal area network (WPAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q228" value="a"> a) Connecting devices over a city-wide area</label>
+                <label><input type="radio" name="q228" value="b"> b) Providing high-speed internet to multiple buildings</label>
+                <label><input type="radio" name="q228" value="c"> c) Connecting devices within a very short range around an individual</label>
+                <label><input type="radio" name="q228" value="d"> d) Using satellites for communication</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">229. Bluetooth is a common technology used for WPANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q229" value="True"> True</label>
+                <label><input type="radio" name="q229" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">230. WPANs are designed for high data rate applications like video streaming.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q230" value="True"> True</label>
+                <label><input type="radio" name="q230" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">231. What is the typical range of a WPAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q231" value="a"> a) A few meters</label>
+                <label><input type="radio" name="q231" value="b"> b) Several kilometers</label>
+                <label><input type="radio" name="q231" value="c"> c) Hundreds of meters</label>
+                <label><input type="radio" name="q231" value="d"> d) Tens of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">232. WPANs are ideal for connecting devices like headphones, keyboards, and mice.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q232" value="True"> True</label>
+                <label><input type="radio" name="q232" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">233. WPANs primarily use licensed spectrum.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q233" value="True"> True</label>
+                <label><input type="radio" name="q233" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">234. What is the primary characteristic of a wireless metropolitan area network (WMAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q234" value="a"> a) Connecting devices within a single room</label>
+                <label><input type="radio" name="q234" value="b"> b) Providing wireless connectivity across a city or large campus</label>
+                <label><input type="radio" name="q234" value="c"> c) Satellite-based communication for remote areas</label>
+                <label><input type="radio" name="q234" value="d"> d) Short-range communication for personal devices</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">235. WiMAX (Worldwide Interoperability for Microwave Access) is a technology used for WMANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q235" value="True"> True</label>
+                <label><input type="radio" name="q235" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">236. WMANs typically offer lower data rates than WLANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q236" value="True"> True</label>
+                <label><input type="radio" name="q236" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">237. What is the typical range of a WMAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q237" value="a"> a) A few meters</label>
+                <label><input type="radio" name="q237" value="b"> b) Tens of meters</label>
+                <label><input type="radio" name="q237" value="c"> c) Several kilometers</label>
+                <label><input type="radio" name="q237" value="d"> d) Hundreds of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">238. WMANs are suitable for providing last-mile broadband access.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q238" value="True"> True</label>
+                <label><input type="radio" name="q238" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">239. WMANs are primarily used for connecting devices within a single building.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q239" value="True"> True</label>
+                <label><input type="radio" name="q239" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">240. What is the primary characteristic of a wireless wide area network (WWAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q240" value="a"> a) Providing wireless connectivity over very large geographic areas (e.g., countries)</label>
+                <label><input type="radio" name="q240" value="b"> b) Connecting devices within a single office</label>
+                <label><input type="radio" name="q240" value="c"> c) Short-range communication for personal devices</label>
+                <label><input type="radio" name="q240" value="d"> d) Primarily uses wired connections</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">241. Cellular networks (2G, 3G, 4G, 5G) are examples of WWANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q241" value="True"> True</label>
+                <label><input type="radio" name="q241" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">242. WWANs typically offer the highest data rates among all wireless network types.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q242" value="True"> True</label>
+                <label><input type="radio" name="q242" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">243. What is the typical range of a WWAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q243" value="a"> a) Hundreds to thousands of kilometers</label>
+                <label><input type="radio" name="q243" value="b"> b) A few meters</label>
+                <label><input type="radio" name="q243" value="c"> c) Tens of meters</label>
+                <label><input type="radio" name="q243" value="d"> d) Several kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">244. WWANs are used for mobile communication and internet access over vast areas.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q244" value="True"> True</label>
+                <label><input type="radio" name="q244" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">245. WWANs generally have lower latency compared to WLANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q245" value="True"> True</label>
+                <label><input type="radio" name="q245" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">246. What is the primary characteristic of a wireless body area network (WBAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q246" value="a"> a) Connecting devices across a city</label>
+                <label><input type="radio" name="q246" value="b"> b) Connecting small, low-power devices on or around the human body</label>
+                <label><input type="radio" name="q246" value="c"> c) Providing high-speed internet to rural areas</label>
+                <label><input type="radio" name="q246" value="d"> d) Satellite communication for remote sensing</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">247. WBANs are typically used for healthcare monitoring and fitness tracking.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q247" value="True"> True</label>
+                <label><input type="radio" name="q247" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">248. WBANs require high bandwidth for operation.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q248" value="True"> True</label>
+                <label><input type="radio" name="q248" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">249. What is the typical range of a WBAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q249" value="a"> a) A few centimeters to a few meters</label>
+                <label><input type="radio" name="q249" value="b"> b) Tens of meters</label>
+                <label><input type="radio" name="q249" value="c"> c) Several kilometers</label>
+                <label><input type="radio" name="q249" value="d"> d) Hundreds of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">250. WBANs are designed for continuous, real-time data collection.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q250" value="True"> True</label>
+                <label><input type="radio" name="q250" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">251. Security and privacy are major concerns in WBANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q251" value="True"> True</label>
+                <label><input type="radio" name="q251" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">252. What is the primary characteristic of a wireless personal area network (WPAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q252" value="a"> a) Connecting devices over a city-wide area</label>
+                <label><input type="radio" name="q252" value="b"> b) Providing high-speed internet to multiple buildings</label>
+                <label><input type="radio" name="q252" value="c"> c) Connecting devices within a very short range around an individual</label>
+                <label><input type="radio" name="q252" value="d"> d) Using satellites for communication</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">253. Bluetooth is a common technology used for WPANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q253" value="True"> True</label>
+                <label><input type="radio" name="q253" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">254. WPANs are designed for high data rate applications like video streaming.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q254" value="True"> True</label>
+                <label><input type="radio" name="q254" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">255. What is the typical range of a WPAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q255" value="a"> a) A few meters</label>
+                <label><input type="radio" name="q255" value="b"> b) Several kilometers</label>
+                <label><input type="radio" name="q255" value="c"> c) Hundreds of meters</label>
+                <label><input type="radio" name="q255" value="d"> d) Tens of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">256. WPANs are ideal for connecting devices like headphones, keyboards, and mice.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q256" value="True"> True</label>
+                <label><input type="radio" name="q256" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">257. WPANs primarily use licensed spectrum.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q257" value="True"> True</label>
+                <label><input type="radio" name="q257" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">258. What is the primary characteristic of a wireless metropolitan area network (WMAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q258" value="a"> a) Connecting devices within a single room</label>
+                <label><input type="radio" name="q258" value="b"> b) Providing wireless connectivity across a city or large campus</label>
+                <label><input type="radio" name="q258" value="c"> c) Satellite-based communication for remote areas</label>
+                <label><input type="radio" name="q258" value="d"> d) Short-range communication for personal devices</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">259. WiMAX (Worldwide Interoperability for Microwave Access) is a technology used for WMANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q259" value="True"> True</label>
+                <label><input type="radio" name="q259" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">260. WMANs typically offer lower data rates than WLANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q260" value="True"> True</label>
+                <label><input type="radio" name="q260" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">261. What is the typical range of a WMAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q261" value="a"> a) A few meters</label>
+                <label><input type="radio" name="q261" value="b"> b) Tens of meters</label>
+                <label><input type="radio" name="q261" value="c"> c) Several kilometers</label>
+                <label><input type="radio" name="q261" value="d"> d) Hundreds of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">262. WMANs are suitable for providing last-mile broadband access.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q262" value="True"> True</label>
+                <label><input type="radio" name="q262" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">263. WMANs are primarily used for connecting devices within a single building.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q263" value="True"> True</label>
+                <label><input type="radio" name="q263" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">264. What is the primary characteristic of a wireless wide area network (WWAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q264" value="a"> a) Providing wireless connectivity over very large geographic areas (e.g., countries)</label>
+                <label><input type="radio" name="q264" value="b"> b) Connecting devices within a single office</label>
+                <label><input type="radio" name="q264" value="c"> c) Short-range communication for personal devices</label>
+                <label><input type="radio" name="q264" value="d"> d) Primarily uses wired connections</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">265. Cellular networks (2G, 3G, 4G, 5G) are examples of WWANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q265" value="True"> True</label>
+                <label><input type="radio" name="q265" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">266. WWANs typically offer the highest data rates among all wireless network types.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q266" value="True"> True</label>
+                <label><input type="radio" name="q266" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">267. What is the typical range of a WWAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q267" value="a"> a) Hundreds to thousands of kilometers</label>
+                <label><input type="radio" name="q267" value="b"> b) A few meters</label>
+                <label><input type="radio" name="q267" value="c"> c) Tens of meters</label>
+                <label><input type="radio" name="q267" value="d"> d) Several kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">268. WWANs are used for mobile communication and internet access over vast areas.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q268" value="True"> True</label>
+                <label><input type="radio" name="q268" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">269. WWANs generally have lower latency compared to WLANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q269" value="True"> True</label>
+                <label><input type="radio" name="q269" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">270. What is the primary characteristic of a wireless body area network (WBAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q270" value="a"> a) Connecting devices across a city</label>
+                <label><input type="radio" name="q270" value="b"> b) Connecting small, low-power devices on or around the human body</label>
+                <label><input type="radio" name="q270" value="c"> c) Providing high-speed internet to rural areas</label>
+                <label><input type="radio" name="q270" value="d"> d) Satellite communication for remote sensing</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">271. WBANs are typically used for healthcare monitoring and fitness tracking.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q271" value="True"> True</label>
+                <label><input type="radio" name="q271" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">272. WBANs require high bandwidth for operation.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q272" value="True"> True</label>
+                <label><input type="radio" name="q272" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">273. What is the typical range of a WBAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q273" value="a"> a) A few centimeters to a few meters</label>
+                <label><input type="radio" name="q273" value="b"> b) Tens of meters</label>
+                <label><input type="radio" name="q273" value="c"> c) Several kilometers</label>
+                <label><input type="radio" name="q273" value="d"> d) Hundreds of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">274. WBANs are designed for continuous, real-time data collection.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q274" value="True"> True</label>
+                <label><input type="radio" name="q274" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">275. Security and privacy are major concerns in WBANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q275" value="True"> True</label>
+                <label><input type="radio" name="q275" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">276. What is the primary characteristic of a wireless personal area network (WPAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q276" value="a"> a) Connecting devices over a city-wide area</label>
+                <label><input type="radio" name="q276" value="b"> b) Providing high-speed internet to multiple buildings</label>
+                <label><input type="radio" name="q276" value="c"> c) Connecting devices within a very short range around an individual</label>
+                <label><input type="radio" name="q276" value="d"> d) Using satellites for communication</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">277. Bluetooth is a common technology used for WPANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q277" value="True"> True</label>
+                <label><input type="radio" name="q277" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">278. WPANs are designed for high data rate applications like video streaming.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q278" value="True"> True</label>
+                <label><input type="radio" name="q278" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">279. What is the typical range of a WPAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q279" value="a"> a) A few meters</label>
+                <label><input type="radio" name="q279" value="b"> b) Several kilometers</label>
+                <label><input type="radio" name="q279" value="c"> c) Hundreds of meters</label>
+                <label><input type="radio" name="q279" value="d"> d) Tens of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">280. WPANs are ideal for connecting devices like headphones, keyboards, and mice.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q280" value="True"> True</label>
+                <label><input type="radio" name="q280" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">281. WPANs primarily use licensed spectrum.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q281" value="True"> True</label>
+                <label><input type="radio" name="q281" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">282. What is the primary characteristic of a wireless metropolitan area network (WMAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q282" value="a"> a) Connecting devices within a single room</label>
+                <label><input type="radio" name="q282" value="b"> b) Providing wireless connectivity across a city or large campus</label>
+                <label><input type="radio" name="q282" value="c"> c) Satellite-based communication for remote areas</label>
+                <label><input type="radio" name="q282" value="d"> d) Short-range communication for personal devices</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">283. WiMAX (Worldwide Interoperability for Microwave Access) is a technology used for WMANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q283" value="True"> True</label>
+                <label><input type="radio" name="q283" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">284. WMANs typically offer lower data rates than WLANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q284" value="True"> True</label>
+                <label><input type="radio" name="q284" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">285. What is the typical range of a WMAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q285" value="a"> a) A few meters</label>
+                <label><input type="radio" name="q285" value="b"> b) Tens of meters</label>
+                <label><input type="radio" name="q285" value="c"> c) Several kilometers</label>
+                <label><input type="radio" name="q285" value="d"> d) Hundreds of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">286. WMANs are suitable for providing last-mile broadband access.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q286" value="True"> True</label>
+                <label><input type="radio" name="q286" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">287. WMANs are primarily used for connecting devices within a single building.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q287" value="True"> True</label>
+                <label><input type="radio" name="q287" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">288. What is the primary characteristic of a wireless wide area network (WWAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q288" value="a"> a) Providing wireless connectivity over very large geographic areas (e.g., countries)</label>
+                <label><input type="radio" name="q288" value="b"> b) Connecting devices within a single office</label>
+                <label><input type="radio" name="q288" value="c"> c) Short-range communication for personal devices</label>
+                <label><input type="radio" name="q288" value="d"> d) Primarily uses wired connections</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">289. Cellular networks (2G, 3G, 4G, 5G) are examples of WWANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q289" value="True"> True</label>
+                <label><input type="radio" name="q289" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">290. WWANs typically offer the highest data rates among all wireless network types.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q290" value="True"> True</label>
+                <label><input type="radio" name="q290" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">291. What is the typical range of a WWAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q291" value="a"> a) Hundreds to thousands of kilometers</label>
+                <label><input type="radio" name="q291" value="b"> b) A few meters</label>
+                <label><input type="radio" name="q291" value="c"> c) Tens of meters</label>
+                <label><input type="radio" name="q291" value="d"> d) Several kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">292. WWANs are used for mobile communication and internet access over vast areas.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q292" value="True"> True</label>
+                <label><input type="radio" name="q292" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">293. WWANs generally have lower latency compared to WLANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q293" value="True"> True</label>
+                <label><input type="radio" name="q293" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="b">
+            <p class="question-text">294. What is the primary characteristic of a wireless body area network (WBAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q294" value="a"> a) Connecting devices across a city</label>
+                <label><input type="radio" name="q294" value="b"> b) Connecting small, low-power devices on or around the human body</label>
+                <label><input type="radio" name="q294" value="c"> c) Providing high-speed internet to rural areas</label>
+                <label><input type="radio" name="q294" value="d"> d) Satellite communication for remote sensing</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">295. WBANs are typically used for healthcare monitoring and fitness tracking.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q295" value="True"> True</label>
+                <label><input type="radio" name="q295" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="False">
+            <p class="question-text">296. WBANs require high bandwidth for operation.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q296" value="True"> True</label>
+                <label><input type="radio" name="q296" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="a">
+            <p class="question-text">297. What is the typical range of a WBAN?</p>
+            <div class="options">
+                <label><input type="radio" name="q297" value="a"> a) A few centimeters to a few meters</label>
+                <label><input type="radio" name="q297" value="b"> b) Tens of meters</label>
+                <label><input type="radio" name="q297" value="c"> c) Several kilometers</label>
+                <label><input type="radio" name="q297" value="d"> d) Hundreds of kilometers</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">298. WBANs are designed for continuous, real-time data collection.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q298" value="True"> True</label>
+                <label><input type="radio" name="q298" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="true-false-question" data-correct-answer="True">
+            <p class="question-text">299. Security and privacy are major concerns in WBANs.</p>
+            <div class="true-false-options">
+                <label><input type="radio" name="q299" value="True"> True</label>
+                <label><input type="radio" name="q299" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-correct-answer="c">
+            <p class="question-text">300. What is the primary characteristic of a wireless personal area network (WPAN)?</p>
+            <div class="options">
+                <label><input type="radio" name="q300" value="a"> a) Connecting devices over a city-wide area</label>
+                <label><input type="radio" name="q300" value="b"> b) Providing high-speed internet to multiple buildings</label>
+                <label><input type="radio" name="q300" value="c"> c) Connecting devices within a very short range around an individual</label>
+                <label><input type="radio" name="q300" value="d"> d) Using satellites for communication</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+        
+        <div id="results">
+            النتائج: <span class="correct-count" id="correctCount">0</span> إجابة صحيحة / <span class="incorrect-count" id="incorrectCount">0</span> إجابة خاطئة
+        </div>
+    </div>
+
+    <script>
+        let correctAnswersCount = 0;
+        let incorrectAnswersCount = 0;
+        const answeredQuestions = new Set(); 
+
+        document.querySelectorAll('.question-block, .true-false-question').forEach(block => {
+            const radios = block.querySelectorAll('input[type="radio"]');
+            const correctAnswer = block.dataset.correctAnswer;
+            const feedbackDiv = block.querySelector('.feedback');
+            if (radios.length === 0) return; 
+
+            const questionName = radios[0].name; 
+
+            radios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const wasAnswered = answeredQuestions.has(questionName);
+                    
+                    if (this.value === correctAnswer) {
+                        if (!wasAnswered || (wasAnswered && feedbackDiv.classList.contains('incorrect'))) {
+                            correctAnswersCount++;
+                            if (wasAnswered) incorrectAnswersCount--; 
+                        }
+                        feedbackDiv.textContent = 'إجابة صحيحة! 🎉';
+                        feedbackDiv.className = 'feedback correct';
+                    } else {
+                        if (!wasAnswered || (wasAnswered && feedbackDiv.classList.contains('correct'))) {
+                            incorrectAnswersCount++;
+                            if (wasAnswered) correctAnswersCount--; 
+                        }
+                        feedbackDiv.textContent = 'إجابة خاطئة.'; 
+                        feedbackDiv.className = 'feedback incorrect';
+                    }
+                    
+                    if (!wasAnswered) {
+                        answeredQuestions.add(questionName); 
+                    }
+                    feedbackDiv.style.display = 'block';
+                    
+                    document.getElementById('correctCount').textContent = correctAnswersCount;
+                    document.getElementById('incorrectCount').textContent = incorrectAnswersCount;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
